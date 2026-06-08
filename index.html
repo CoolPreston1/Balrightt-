@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Jinxi's Balrightt Universe</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    text-align:center;
+    background:linear-gradient(135deg,#7fdcff,#ffffff);
+    margin:0;
+    padding:20px;
+}
+h1{
+    font-size:4rem;
+    color:#0088cc;
+}
+#balrighttDisplay{
+    font-size:2rem;
+    font-weight:bold;
+    margin:30px auto;
+    max-width:1000px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+}
+button{
+    font-size:1.5rem;
+    padding:15px 30px;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>JINXI'S BALRIGHTT UNIVERSE</h1>
+
+<p>A website dedicated to Jinxi saying BALRIGHTT!</p>
+
+<div id="balrighttDisplay">
+    BALRIGHTT!
+</div>
+
+<button onclick="newBalrightt()">SUMMON BALRIGHTT</button>
+
+<script>
+const starts = [
+"balrightt","megabalrightt","ultrabalrightt","hyperbalrightt",
+"cosmicbalrightt","galaxybalrightt","supremebalrightt",
+"jinxibalrightt","legendarybalrightt","turbobalrightt"
+];
+
+const middles = [
+"flazzle","zoomble","crinkle","wobble","quazzle",
+"zingle","floober","norb","bazoom","glorp"
+];
+
+const ends = [
+"balrightt","balrighttt","balrighttx","balrighttmax",
+"balrighttprime","balrighttomega","balrighttinfinity",
+"balrighttultimate","balrighttplus","balrighttlegend"
+];
+
+const combos = [];
+
+for(let i=0;i<1000;i++){
+    combos.push(
+        starts[Math.floor(Math.random()*starts.length)] +
+        middles[Math.floor(Math.random()*middles.length)] +
+        ends[Math.floor(Math.random()*ends.length)]
+    );
+}
+
+function newBalrightt(){
+    document.getElementById("balrighttDisplay").innerText =
+        combos[Math.floor(Math.random()*combos.length)];
+}
+</script>
+
+</body>
+</html>
